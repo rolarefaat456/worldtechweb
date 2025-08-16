@@ -247,7 +247,9 @@ class _ProjectViewState extends State<ProjectView> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => ProjectDetailsView(index: index,),
+                                builder:
+                                    (context) =>
+                                        ProjectDetailsView(index: index),
                               ),
                             );
                           },
@@ -266,27 +268,41 @@ class _ProjectViewState extends State<ProjectView> {
                                         children: [
                                           CircleAvatar(
                                             radius:
-                                                MediaQuery.of(context).size.width <= 600
+                                                MediaQuery.of(
+                                                          context,
+                                                        ).size.width <=
+                                                        600
                                                     ? 16
-                                                    : MediaQuery.of(context).size.width /
+                                                    : MediaQuery.of(
+                                                          context,
+                                                        ).size.width /
                                                         60,
                                             backgroundColor: Color(0xffE9FE00),
                                             child: Icon(
                                               Icons.north_east,
                                               size:
-                                                  MediaQuery.of(context).size.width / 60,
+                                                  MediaQuery.of(
+                                                    context,
+                                                  ).size.width /
+                                                  60,
                                             ),
                                           ),
                                           SizedBox(
                                             width:
-                                                MediaQuery.of(context).size.width < 400
+                                                MediaQuery.of(
+                                                          context,
+                                                        ).size.width <
+                                                        400
                                                     ? 8
                                                     : 22,
                                           ),
                                           Text(
-                                            value.projects['data'][index]['title'],
+                                            value
+                                                .projects['data'][index]['title'],
                                             // "Trend El Agaar Application",
-                                            style: AppTextStyles.style26w500(context),
+                                            style: AppTextStyles.style26w500(
+                                              context,
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -300,13 +316,13 @@ class _ProjectViewState extends State<ProjectView> {
                                     ),
                                   ],
                                 );
-                              }
+                              },
                             ),
                           ),
                         );
                       },
                     );
-                  }
+                  },
                 ),
                 FooterSection(),
               ],
