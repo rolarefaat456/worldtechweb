@@ -113,4 +113,5 @@ flutter:
     - assets/fonts/
     - assets/images/
     - assets/animations/
+    - assets/animations/animation/No-Data.json
 

@@ -1,8 +1,8 @@
+// features/home/widgets/footer_section.dart
 import 'package:flutter/material.dart';
 
 import '../../../core/utils/app_colors.dart';
 import '../../../core/utils/app_text_style.dart';
-import '../../../core/widgets/custom_logo.dart';
 import '../../../generated/assets.dart';
 import 'footer_item.dart';
 

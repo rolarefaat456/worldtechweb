@@ -4,8 +4,8 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:world_tech_website/features/home/providers/animationcontaines.dart';
 import 'package:world_tech_website/features/home/providers/control.dart';
+import 'package:world_tech_website/features/home/widgets/empty_page.dart';
 import 'package:world_tech_website/features/home/widgets/team_item.dart';
 
 import '../../../core/utils/app_colors.dart';
@@ -209,7 +209,7 @@ class TeamSection extends StatelessWidget {
                           ? Center(child: CircularProgressIndicator())
                           : value.employees['data'] == null ||
                               value.employees['data'].isEmpty
-                          ? Center(child: Text('no employee'))
+                          ? Center(child: EmptyPage())
                           : ListView.builder(
                             scrollDirection: Axis.horizontal,
                             physics: const ClampingScrollPhysics(),
@@ -255,7 +255,7 @@ class TeamSection extends StatelessWidget {
                             ? Center(child: CircularProgressIndicator())
                             : value.employees['data'] == null ||
                                 value.employees['data'].isEmpty
-                            ? Center(child: Text('no employee'))
+                            ? Center(child: EmptyPage())
                             : ListView.builder(
                               scrollDirection: Axis.horizontal,
                               physics: const ClampingScrollPhysics(),

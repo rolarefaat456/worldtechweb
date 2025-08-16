@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:world_tech_website/features/home/providers/animationbotton.dart';
 import 'package:world_tech_website/features/home/providers/animationclass.dart';
 import 'package:world_tech_website/features/home/providers/control.dart';
+import 'package:world_tech_website/features/home/widgets/empty_page.dart';
 import '../../../core/utils/app_colors.dart';
 import '../../../core/utils/app_text_style.dart';
 import '../../../generated/assets.dart';
@@ -92,7 +93,7 @@ class _ProjectsSectionState extends State<ProjectsSection>
                       ? Center(child: CircularProgressIndicator())
                       : value.projects['data'] == null ||
                           value.projects['data'].isEmpty
-                      ? Center(child: Text('no projects'))
+                      ? Center(child: EmptyPage())
                       : ListView.builder(
                         controller: _controller,
                         scrollDirection: Axis.horizontal,

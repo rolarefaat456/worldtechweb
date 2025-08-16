@@ -2,10 +2,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:world_tech_website/features/home/providers/control.dart';
+import 'package:world_tech_website/features/home/widgets/empty_page.dart';
 
 class HeroSection extends StatelessWidget {
   const HeroSection({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Consumer<Control>(
@@ -13,7 +13,7 @@ class HeroSection extends StatelessWidget {
         return value.getbanner == null
             ? Center(child: CircularProgressIndicator())
             : value.employees['data'] == null || value.employees['data'].isEmpty
-            ? Center(child: Text('no banner'))
+            ? Center(child: EmptyPage())
             : ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: value.getbanner['data'].length,
